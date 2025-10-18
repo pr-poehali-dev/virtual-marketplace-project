@@ -117,7 +117,7 @@ export default function Index() {
               <div className="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 border border-primary/20">
                 <Icon name="Coins" size={20} className="text-primary" />
                 <span className="font-semibold text-lg">{balance.toLocaleString()}</span>
-                <span className="text-muted-foreground text-sm">CM</span>
+                <span className="text-muted-foreground text-sm">ТР</span>
               </div>
               <Button variant="ghost" size="icon">
                 <Icon name="User" size={20} />
@@ -227,7 +227,7 @@ export default function Index() {
                         </span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-2xl font-bold text-primary">{channel.price} CM</span>
+                        <span className="text-2xl font-bold text-primary">{channel.price} ТР</span>
                         <Button onClick={() => handlePurchase(channel.price)} size="sm">
                           Купить
                         </Button>
@@ -308,9 +308,9 @@ export default function Index() {
               <CardContent>
                 <div className="text-center py-8">
                   <div className="text-5xl font-bold bg-gradient-to-r from-primary via-blue-500 to-orange-500 bg-clip-text text-transparent mb-2">
-                    {balance.toLocaleString()} CM
+                    {balance.toLocaleString()} ТР
                   </div>
-                  <p className="text-muted-foreground">ChannelMarket Coins</p>
+                  <p className="text-muted-foreground">Транс-рефанды</p>
                 </div>
               </CardContent>
             </Card>
@@ -346,7 +346,7 @@ export default function Index() {
                         </div>
                       </div>
                       <span className={`font-bold ${tx.amount > 0 ? 'text-green-500' : 'text-red-500'}`}>
-                        {tx.amount > 0 ? '+' : ''}{tx.amount} CM
+                        {tx.amount > 0 ? '+' : ''}{tx.amount} ТР
                       </span>
                     </div>
                   ))}
@@ -405,7 +405,7 @@ export default function Index() {
                       <Input id="subscribers" type="number" placeholder="0" />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="price">Цена (CM)</Label>
+                      <Label htmlFor="price">Цена (ТР)</Label>
                       <Input id="price" type="number" placeholder="0" />
                     </div>
                   </div>
@@ -445,7 +445,7 @@ export default function Index() {
 
                 <h3 className="text-xl font-semibold mb-3">3. Финансовые операции</h3>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
-                  <li>Все транзакции проводятся в внутренней валюте CM</li>
+                  <li>Все транзакции проводятся в внутренней валюте транс-рефанды (ТР)</li>
                   <li>Комиссия площадки составляет 5% от сделки</li>
                   <li>Возврат средств возможен в течение 24 часов при наличии оснований</li>
                 </ul>
