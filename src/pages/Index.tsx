@@ -110,7 +110,7 @@ export default function Index() {
                 <Icon name="Zap" size={24} className="text-white" />
               </div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-primary via-blue-500 to-orange-500 bg-clip-text text-transparent">
-                ChannelMarket
+                Angeles Empire Store
               </h1>
             </div>
             <div className="flex items-center gap-4">
@@ -132,7 +132,6 @@ export default function Index() {
           <div className="flex gap-1">
             {[
               { id: 'home', label: 'Главная', icon: 'Home' },
-              { id: 'catalog', label: 'Каталог', icon: 'Store' },
               { id: 'balance', label: 'Баланс', icon: 'Wallet' },
               { id: 'publish', label: 'Разместить', icon: 'PlusCircle' },
               { id: 'rules', label: 'Правила', icon: 'FileText' }
@@ -240,7 +239,7 @@ export default function Index() {
           </div>
         )}
 
-        {activeTab === 'catalog' && (
+        {activeTab === 'catalog-removed' && (
           <div className="space-y-6 animate-fade-in">
             <div className="flex items-center justify-between">
               <h2 className="text-2xl font-bold">Каталог каналов</h2>
@@ -432,7 +431,7 @@ export default function Index() {
               <CardContent className="prose prose-invert max-w-none">
                 <h3 className="text-xl font-semibold mb-3">1. Общие положения</h3>
                 <p className="text-muted-foreground mb-4">
-                  ChannelMarket — закрытая площадка для торговли Telegram-каналами с использованием внутренней валюты (CM). Доступ предоставляется только верифицированным пользователям.
+                  Angeles Empire Store — закрытая площадка для торговли Telegram-каналами с использованием внутренней валюты транс-рефанды (ТР). Доступ предоставляется только верифицированным пользователям.
                 </p>
 
                 <h3 className="text-xl font-semibold mb-3">2. Правила размещения</h3>
@@ -474,7 +473,7 @@ export default function Index() {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-blue-500 flex items-center justify-center">
                 <Icon name="Zap" size={18} className="text-white" />
               </div>
-              <span className="font-semibold">ChannelMarket © 2024</span>
+              <span className="font-semibold">Angeles Empire Store © 2024</span>
             </div>
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
               <a href="#" className="hover:text-primary transition-colors">Поддержка</a>
