@@ -132,6 +132,7 @@ export default function Index() {
           <div className="flex gap-1">
             {[
               { id: 'home', label: 'Главная', icon: 'Home' },
+              { id: 'catalog', label: 'Каталог', icon: 'Store' },
               { id: 'balance', label: 'Баланс', icon: 'Wallet' },
               { id: 'publish', label: 'Разместить', icon: 'PlusCircle' },
               { id: 'rules', label: 'Правила', icon: 'FileText' }
@@ -239,7 +240,7 @@ export default function Index() {
           </div>
         )}
 
-        {activeTab === 'catalog-removed' && (
+        {activeTab === 'catalog' && (
           <div className="space-y-6 animate-fade-in">
             <div className="flex items-center justify-between">
               <h2 className="text-2xl font-bold">Каталог каналов</h2>
@@ -372,21 +373,6 @@ export default function Index() {
                   <div className="space-y-2">
                     <Label htmlFor="channel-link">Ссылка на канал</Label>
                     <Input id="channel-link" placeholder="t.me/your_channel" />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="category">Категория</Label>
-                    <Select>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Выберите категорию" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="finance">Финансы</SelectItem>
-                        <SelectItem value="tech">Технологии</SelectItem>
-                        <SelectItem value="business">Бизнес</SelectItem>
-                        <SelectItem value="design">Дизайн</SelectItem>
-                      </SelectContent>
-                    </Select>
                   </div>
 
                   <div className="space-y-2">
