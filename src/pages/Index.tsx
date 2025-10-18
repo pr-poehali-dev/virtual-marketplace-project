@@ -157,42 +157,6 @@ export default function Index() {
       <main className="container mx-auto px-4 py-8">
         {activeTab === 'home' && (
           <div className="space-y-8 animate-fade-in">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <Card className="bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20 hover-scale">
-                <CardHeader className="pb-3">
-                  <CardTitle className="flex items-center gap-2">
-                    <Icon name="TrendingUp" className="text-primary" />
-                    Всего каналов
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-3xl font-bold">{channels.length}</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-gradient-to-br from-blue-500/10 to-blue-500/5 border-blue-500/20 hover-scale">
-                <CardHeader className="pb-3">
-                  <CardTitle className="flex items-center gap-2">
-                    <Icon name="Users" className="text-blue-500" />
-                    Пользователей
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-3xl font-bold">1,247</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-gradient-to-br from-orange-500/10 to-orange-500/5 border-orange-500/20 hover-scale">
-                <CardHeader className="pb-3">
-                  <CardTitle className="flex items-center gap-2">
-                    <Icon name="ShoppingCart" className="text-orange-500" />
-                    Сделок сегодня
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-3xl font-bold">89</p>
-                </CardContent>
-              </Card>
-            </div>
-
             <div>
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                 <Icon name="Flame" className="text-orange-500" />
@@ -244,57 +208,12 @@ export default function Index() {
           <div className="space-y-6 animate-fade-in">
             <div className="flex items-center justify-between">
               <h2 className="text-2xl font-bold">Каталог каналов</h2>
-              <Select value={categoryFilter} onValueChange={setCategoryFilter}>
-                <SelectTrigger className="w-[200px]">
-                  <SelectValue placeholder="Категория" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">Все категории</SelectItem>
-                  <SelectItem value="Финансы">Финансы</SelectItem>
-                  <SelectItem value="Технологии">Технологии</SelectItem>
-                  <SelectItem value="Бизнес">Бизнес</SelectItem>
-                  <SelectItem value="Дизайн">Дизайн</SelectItem>
-                </SelectContent>
-              </Select>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {filteredChannels.map(channel => (
-                <Card key={channel.id} className="hover-scale overflow-hidden">
-                  <CardHeader>
-                    <div className="flex items-start justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-blue-500/20 flex items-center justify-center text-2xl">
-                          {channel.image}
-                        </div>
-                        <div>
-                          <CardTitle className="text-lg">{channel.name}</CardTitle>
-                          <Badge variant="secondary" className="mt-1">{channel.category}</Badge>
-                        </div>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground mb-4">{channel.description}</p>
-                    <div className="flex items-center justify-between text-sm mb-4">
-                      <span className="flex items-center gap-1">
-                        <Icon name="Users" size={16} className="text-muted-foreground" />
-                        {(channel.subscribers / 1000).toFixed(1)}k
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Icon name="Star" size={16} className="text-yellow-500" />
-                        {channel.rating}
-                      </span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-2xl font-bold text-primary">{channel.price} CM</span>
-                      <Button onClick={() => handlePurchase(channel.price)} size="sm">
-                        Купить
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="text-center py-16">
+              <Icon name="Store" size={64} className="mx-auto text-muted-foreground mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Каталог пуст</h3>
+              <p className="text-muted-foreground">Пока нет доступных каналов для покупки</p>
             </div>
           </div>
         )}
